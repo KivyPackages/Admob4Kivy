@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/admob4kivy/__init__.py
+src/admob4kivy/api.py
+src/admob4kivy/backends.py
+src/admob4kivy.egg-info/PKG-INFO
+src/admob4kivy.egg-info/SOURCES.txt
+src/admob4kivy.egg-info/dependency_links.txt
+src/admob4kivy.egg-info/requires.txt
+src/admob4kivy.egg-info/top_level.txt

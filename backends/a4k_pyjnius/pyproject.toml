@@ -1,0 +1,26 @@
+[project]
+name = "a4k-pyjnius"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Sahil-pixel" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pyjnius",
+    
+]
+
+[build-system]
+requires = ["pyjnius-builder"]
+build-backend = "pyjnius_builder"
+
+[tool.pyjnius]
+java-paths = [
+    "java_code",
+]
+
+[tool.uv.sources]
+pyjnius-builder = { git = "https://github.com/kivy-school/pyjnius-builder" }
+

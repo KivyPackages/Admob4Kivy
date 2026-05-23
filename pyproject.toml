@@ -1,23 +1,37 @@
 [project]
 name = "admob4kivy"
-version = "0.1.3"
+version = "0.1.4"
 description = "Add your description here"
 readme = "README.md"
 authors = [
     { name = "Sahil Pixel" }
 ]
-requires-python = ">=3.11.11"
+requires-python = ">=3.13"
 dependencies = [
-]
-
-[dependency-groups]
-android = [
-    "pyjnius",
+    "a4k-pyjnius ; sys_platform == 'android'",
+    #"a4k-pyswift ; sys_platform == 'ios'",
+   
 ]
 
 [build-system]
-requires = ["uv_build>=0.8.4,<0.9.0"]
-build-backend = "uv_build"
+requires = [ "ksp-builder", "setuptools"]
+build-backend =  "ksp_builder"
 
 [tool.uv.sources]
+a4k-pyjnius = { path = "backends/a4k_pyjnius" }
+ksp-builder = { git = "https://github.com/kivy-school/ksp-builder" }
+#a4k-pyswift = { path = "backends/a4k_pyswift" }
 
+
+
+[tool.kivy-school.android]
+
+gradle_dependencies = [
+    "com.google.android.gms:play-services-ads:22.6.0",
+    "com.google.firebase:firebase-ads:21.4.0"
+]
+
+permissions = [
+    "INTERNET",
+    "ACCESS_NETWORK_STATE"
+]

@@ -1,0 +1,3 @@
+
+[:sys_platform == "android"]
+a4k-pyjnius
